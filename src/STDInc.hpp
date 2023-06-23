@@ -110,6 +110,8 @@ using namespace std::literals;
 #include "Utils\Library.hpp"
 #include "Utils\HTTP.hpp"
 
+#include "Steam\Steam.hpp"
+
 #include "Game\Structs.hpp"
 #include "Game\Functions.hpp"
 #include "Components\Modules\Dvars.hpp"

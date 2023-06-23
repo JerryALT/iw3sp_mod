@@ -80,6 +80,8 @@ namespace Components
 		{
 			Loader::Postgame = true;
 
+			Steam::SteamAPI_Shutdown();
+
 			auto components = Loader::Components;
 
 			std::reverse(components.begin(), components.end());
