@@ -390,8 +390,6 @@ namespace Components
 
 	CommonPatch::CommonPatch()
 	{
-		Steam::SteamAPI_Init();
-
 		Events::OnDvarInit([]
 		{
 			//TESTING DVARS

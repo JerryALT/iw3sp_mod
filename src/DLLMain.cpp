@@ -38,6 +38,13 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD  ul_reason_for_call, LPVOID /*l
             Utils::SetEnvironment();
             Steam::Proxy::RunMod();
 
+            if (!Steam::SteamAPI_Init())
+            {
+                MessageBoxA(nullptr, "Steam must be running to play this game client.", nullptr, MB_ICONERROR);
+                Utils::Library::Terminate();
+                return FALSE;
+            }
+
             DWORD oldProtect;
             VirtualProtect(_module + 0x1000, 0x0FB7000, PAGE_EXECUTE_READWRITE, &oldProtect);
 
